@@ -1,0 +1,53 @@
+[
+  {
+    "id": "CASE_01_ZERO_DIVISION",
+    "file_path": "services/payment.py",
+    "description": "Division by zero when currency discount is 0.0",
+    "code": "def process_payment(amount: float, discount: float) -> float:\n    # Bug: Zero division if discount is 0.0\n    fee = amount / discount\n    return fee\n",
+    "modified_lines": [3],
+    "ground_truth_has_defect": true,
+    "ground_truth_rule": "ZERO_DIVISION",
+    "complexity": 2
+  },
+  {
+    "id": "CASE_02_SHELL_INJECTION",
+    "file_path": "core/runner.py",
+    "description": "Subprocess with shell=True command injection",
+    "code": "import subprocess\ndef execute_task(task_cmd: str):\n    # Security flaw: shell=True with user input\n    return subprocess.Popen(task_cmd, shell=True)\n",
+    "modified_lines": [4],
+    "ground_truth_has_defect": true,
+    "ground_truth_rule": "B602",
+    "complexity": 2
+  },
+  {
+    "id": "CASE_03_NONE_DEREFERENCE",
+    "file_path": "utils/user.py",
+    "description": "Unchecked NoneType access on user profile",
+    "code": "def get_user_tier(user):\n    if user is None:\n        # Missing return\n        pass\n    return user.tier.upper()\n",
+    "modified_lines": [2, 3, 4, 5],
+    "ground_truth_has_defect": true,
+    "ground_truth_rule": "NONE_DEREFERENCE",
+    "complexity": 3
+  },
+  {
+    "id": "CASE_04_CLEAN_CODE",
+    "file_path": "math/calc.py",
+    "description": "Clean, robust division with proper guard",
+    "code": "def safe_divide(x: float, y: float) -> float:\n    if y == 0:\n        raise ValueError('Divisor cannot be zero')\n    return x / y\n",
+    "modified_lines": [2, 3],
+    "ground_truth_has_defect": false,
+    "ground_truth_rule": null,
+    "complexity": 2
+  },
+  {
+    "id": "CASE_05_HIGH_COMPLEXITY_LOCK",
+    "file_path": "concurrency/sync.py",
+    "description": "High cyclomatic complexity lock inversion",
+    "code": "def complex_sync(a, b, flag1, flag2, mode):\n    if flag1:\n        if flag2:\n            for i in range(10):\n                if mode == 'A':\n                    lock_a.acquire()\n                elif mode == 'B':\n                    lock_b.acquire()\n        else:\n            if mode == 'C':\n                lock_a.acquire()\n    return True\n",
+    "modified_lines": [6, 7, 8, 9, 10],
+    "ground_truth_has_defect": true,
+    "ground_truth_rule": "DEADLOCK_RISK",
+    "complexity": 14
+  }
+]
+

@@ -1,0 +1,27 @@
+# Web Framework & Server
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+pydantic>=2.9.0
+pydantic-settings>=2.6.0
+
+# Database & Async ORM
+sqlalchemy>=2.0.36
+aiosqlite>=0.20.0
+greenlet>=3.1.1
+
+# HTTP Clients
+httpx>=0.28.0
+
+# Static Analysis & Security
+ruff>=0.8.0
+bandit>=1.8.0
+
+# Testing & Coverage
+pytest>=8.3.0
+pytest-cov>=6.0.0
+pytest-asyncio>=0.24.0
+
+# Docker SDK & Utilities
+docker>=7.1.0
+python-dotenv>=1.0.1
+

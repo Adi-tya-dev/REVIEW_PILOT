@@ -1,0 +1,47 @@
+[
+  {
+    "approach": "Static-only",
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1_score": 0.67,
+    "false_positive_rate": 0.0,
+    "bug_detection_rate": 0.5,
+    "test_compilation_rate": 0.0,
+    "avg_latency_ms": 901,
+    "model_calls_per_pr": 0.0,
+    "llm_escalation_rate": 0.0,
+    "avg_tokens_per_pr": 0,
+    "avg_cost_per_pr_usd": 0.0,
+    "reproducibility_rate": 0.88
+  },
+  {
+    "approach": "LLM-only",
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1_score": 0.86,
+    "false_positive_rate": 0.0,
+    "bug_detection_rate": 0.75,
+    "test_compilation_rate": 0.82,
+    "avg_latency_ms": 0,
+    "model_calls_per_pr": 1.0,
+    "llm_escalation_rate": 100.0,
+    "avg_tokens_per_pr": 1840,
+    "avg_cost_per_pr_usd": 0.00368,
+    "reproducibility_rate": 0.65
+  },
+  {
+    "approach": "Hybrid SLM-LLM",
+    "precision": 0.8,
+    "recall": 1.0,
+    "f1_score": 0.89,
+    "false_positive_rate": 1.0,
+    "bug_detection_rate": 1.0,
+    "test_compilation_rate": 0.91,
+    "avg_latency_ms": 2094,
+    "model_calls_per_pr": 1.0,
+    "llm_escalation_rate": 0.0,
+    "avg_tokens_per_pr": 410,
+    "avg_cost_per_pr_usd": 0.0,
+    "reproducibility_rate": 0.94
+  }
+]

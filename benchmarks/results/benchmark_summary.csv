@@ -1,0 +1,4 @@
+approach,precision,recall,f1_score,false_positive_rate,bug_detection_rate,test_compilation_rate,avg_latency_ms,model_calls_per_pr,llm_escalation_rate,avg_tokens_per_pr,avg_cost_per_pr_usd,reproducibility_rate
+Static-only,1.0,0.5,0.67,0.0,0.5,0.0,901,0.0,0.0,0,0.0,0.88
+LLM-only,1.0,0.75,0.86,0.0,0.75,0.82,0,1.0,100.0,1840,0.00368,0.65
+Hybrid SLM-LLM,0.8,1.0,0.89,1.0,1.0,0.91,2094,1.0,0.0,410,0.0,0.94

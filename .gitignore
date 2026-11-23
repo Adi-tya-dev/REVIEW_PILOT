@@ -1,0 +1,48 @@
+# Environments & Secrets
+.env
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Databases & local storage
+*.db
+*.sqlite
+*.sqlite3
+data/
+uploads/
+
+# Node & Frontend
+node_modules/
+frontend/dist/
+frontend/.vite/
+.npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker & Sandboxing
+docker_runs/
+*.log
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Hallmark logs & caches
+.hallmark/
+
